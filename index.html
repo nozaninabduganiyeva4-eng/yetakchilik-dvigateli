@@ -3,958 +3,273 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Noel Tichy: "Yetakchilik Dvigateli" | Magistratura Seminari & Boshqaruv Simulyatori</title>
-  <meta name="description" content="Noel Tichining 'The Leadership Engine' (Yetakchilik dvigateli) nazariyasi asosida tayyorlangan interaktiv magistratura seminar portali, amaliy boshqaruv simulyatori va TPOV konstruktori.">
-  <meta name="keywords" content="Noel Tichy, Yetakchilik dvigateli, The Leadership Engine, TPOV, O'rgatiladigan nuqtai nazar, Magistratura seminari, Boshqaruv simulyatori">
+  <title>Noel Tichy: "Yetakchilik Dvigateli" | Magistratura Seminari</title>
+  <meta name="description" content="Noel Tichining 'Yetakchilik dvigateli' nazariyasi bo'yicha qisqa, sodda va mazmunli seminar darsi portali va qiziqarli ABCD o'yin-testi.">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;600&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@400;500;600;700;800&family=Plus+Jakarta+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css">
 </head>
-<body class="dark-theme">
-  <!-- Audio Control / Sound fx toggle -->
-  <div id="ambient-sound-btn" class="sound-toggle" title="Tovush effektlarini yoqish/o'chirish">
-    <span class="sound-icon">🔔</span>
-    <span class="sound-label">Audio: Yoniq</span>
-  </div>
+<body>
 
-  <!-- Quick Floating Presentation Trigger -->
-  <button id="quick-presentation-btn" class="quick-pres-btn" title="Seminar Taqdimot Rejimiga o'tish (Full Screen)">
-    <span class="pres-icon">📽️</span>
-    <span class="pres-text">Slaydlar Rejimi (F)</span>
-  </button>
-
-  <!-- Navigation Bar -->
+  <!-- Sodda Yuqori Menyu -->
   <header class="navbar">
     <div class="nav-container">
-      <a href="#hero" class="nav-brand">
-        <div class="brand-engine-icon">
-          <div class="gear-outer"></div>
-          <div class="gear-inner">⚡</div>
+      <div class="brand">
+        <span class="brand-icon">⚡</span>
+        <div>
+          <strong class="brand-title">Yetakchilik Dvigateli</strong>
+          <small class="brand-subtitle">Noel Tichy • Magistratura Seminari</small>
         </div>
-        <div class="brand-text">
-          <span class="brand-title">YETAKCHILIK DVIGATELI</span>
-          <span class="brand-sub">Noel Tichy Nazariyasi • Magistratura</span>
-        </div>
-      </a>
-
-      <nav class="nav-menu" id="navMenu">
-        <a href="#about-theory" class="nav-link">Nazariya</a>
-        <a href="#tpov-framework" class="nav-link">TPOV Asoslari</a>
-        <a href="#cases-section" class="nav-link">Keyslar (GE/Pepsi)</a>
-        <a href="#simulator-game" class="nav-link highlight-game">🎮 Boshqaruv O'yini</a>
-        <a href="#tpov-builder" class="nav-link">TPOV Pasporti</a>
-        <a href="#seminar-tools" class="nav-link">Seminar Vositalari</a>
-      </nav>
-
-      <div class="nav-actions">
-        <button id="open-slides-btn" class="btn btn-primary btn-sm">
-          <span>📽️ Taqdimot (F)</span>
-        </button>
       </div>
+      <nav class="nav-links">
+        <a href="#theory">Nazariya</a>
+        <a href="#tpov">TPOV (4 Ustun)</a>
+        <a href="#slides">Taqdimot Slaydlari</a>
+        <a href="#quiz-game" class="nav-btn-highlight">🎮 O'yin-Test (ABCD)</a>
+      </nav>
     </div>
   </header>
 
-  <!-- Hero Section -->
   <main>
-    <section id="hero" class="hero-section">
-      <div class="hero-bg-glow"></div>
-      <div class="container hero-content">
-        <div class="hero-badge">
-          <span class="badge-dot"></span>
-          <span>Magistratura Ilmiy-Amaliy Seminar Darsi Uchun Maxsus Ishlab Chiqilgan</span>
-        </div>
-        <h1 class="hero-title">
-          G'olib Tashkilotlar Har Bir Bo'g'inda <span class="gradient-text">Yetakchilarni Tarbiyalaydi</span>
+    <!-- Asosiy Kirish (Hero) -->
+    <section class="hero">
+      <div class="container hero-box">
+        <span class="badge">🎓 Magistratura Seminar Darsi Uchun Sodda & Qulay</span>
+        <h1 class="hero-heading">
+          Noel Tichy: <span class="gold-text">"Yetakchilik Dvigateli"</span> Nazariyasi
         </h1>
-        <p class="hero-desc">
-          Michigan Universiteti professori <strong>Noel M. Tichy</strong>ning fundamental konsepsiyasi: 
-          <em>"Buyuk yetakchi — eng avvalo buyuk murabbiy va o'rgatuvchidir."</em> 
-          Tashkilotdagi muvaffaqiyat formulasini, <strong>TPOV (O'rgatiladigan Nuqtai Nazar)</strong> tizimini va 
-          yetakchilik dvigatelining harakatlantiruvchi kuchini tahlil qiling.
+        <p class="hero-lead">
+          <strong>Asosiy qoida:</strong> <em>"Buyuk yetakchi — eng avvalo o'z jamoasiga o'rgatuvchi murabbiydir."</em><br>
+          G'olib tashkilotlar faqat bitta boshliqqa qaram bo'lmaydi, balki har bir xodimni yetakchi qilib tarbiyalaydi.
         </p>
-
-        <div class="hero-cta-group">
-          <button class="btn btn-primary btn-lg" onclick="startPresentation()">
-            <span>🚀 Seminarni Boshlash (Slaydlar)</span>
-          </button>
-          <a href="#simulator-game" class="btn btn-outline btn-lg">
-            <span>🎮 Boshqaruv Simulyatorini O'ynash</span>
-          </a>
-          <button class="btn btn-glass btn-lg" onclick="openPrintView()">
-            <span>📄 Seminar Konspekti (PDF)</span>
-          </button>
-        </div>
-
-        <!-- 4 Pillars Quick Overview Cards -->
-        <div class="hero-pillars-grid">
-          <div class="pillar-card" data-step="1">
-            <div class="pillar-icon">💡</div>
-            <h3>1. G'oyalar (Ideas)</h3>
-            <p>Biznes strategiyasi va bozor qonuniyatlarini aniq ko'rish falsafasi.</p>
-          </div>
-          <div class="pillar-card" data-step="2">
-            <div class="pillar-icon">⚖️</div>
-            <h3>2. Qadriyatlar (Values)</h3>
-            <p>Murosa qilinmaydigan axloqiy mezonlar va tashkiliy madaniyat.</p>
-          </div>
-          <div class="pillar-card" data-step="3">
-            <div class="pillar-icon">🔥</div>
-            <h3>3. Hissiy Energiya (Energy)</h3>
-            <p>Jamoani safarbar etish va har bir inson ichidagi salohiyatni uyg'otish.</p>
-          </div>
-          <div class="pillar-card" data-step="4">
-            <div class="pillar-icon">⚡</div>
-            <h3>4. Qat'iyatlilik (Edge)</h3>
-            <p>Qiyin va noqulay qarorlarni tez, qat'iy va adolatli qabul qilish mahorati.</p>
-          </div>
+        <div class="hero-buttons">
+          <a href="#slides" class="btn btn-primary">📽️ Slaydlarni Ko'rish (Seminar Rejimi)</a>
+          <a href="#quiz-game" class="btn btn-secondary">🎮 O'yin-Testni Boshlash (ABCD)</a>
+          <button class="btn btn-outline" onclick="window.print()">🖨️ Qisqa Konspekt (Chop Etish)</button>
         </div>
       </div>
     </section>
 
-    <!-- Interactive Engine Visualizer -->
-    <section class="engine-mechanism-section">
+    <!-- 1-Bo'lim: 3 Daqiqada Nazariya (Qisqa & Tushunarli) -->
+    <section id="theory" class="section">
       <div class="container">
-        <div class="section-header text-center">
-          <span class="section-tag">Interaktiv Modellashtirish</span>
-          <h2 class="section-title">Yetakchilik Dvigateli Qanday Ishlaydi?</h2>
-          <p class="section-subtitle">
-            An'anaviy tashkilotlar faqat yuqoridan buyruq beradi; "Yetakchilik Dvigateli"ga ega tashkilotlar esa 
-            har bir darajada o'rgatuvchi yetakchilarni ko'paytiradi (Virtuous Teaching Cycle).
-          </p>
+        <div class="section-title-wrap">
+          <span class="section-badge">1-QISM</span>
+          <h2>Nazariyaning Asosiy Mazmuni (Londa & Oddiy)</h2>
+          <p>Talabalar seminarda 3 daqiqa ichida tushuntirib bera oladigan 3 ta muhim nuqta:</p>
         </div>
 
-        <div class="engine-interactive-wrapper">
-          <div class="engine-diagram">
-            <div class="engine-core">
-              <div class="engine-pulse"></div>
-              <div class="core-content">
-                <span class="core-icon">👑</span>
-                <strong>LEADER-TEACHER</strong>
-                <small>Yetakchi-Murabbiy</small>
-              </div>
-            </div>
-
-            <!-- Orbit Nodes -->
-            <div class="orbit-node node-ideas" onclick="showPillarDetail('ideas')">
-              <span class="node-icon">💡</span>
-              <span class="node-label">Ideas (G'oyalar)</span>
-            </div>
-            <div class="orbit-node node-values" onclick="showPillarDetail('values')">
-              <span class="node-icon">⚖️</span>
-              <span class="node-label">Values (Qadriyatlar)</span>
-            </div>
-            <div class="orbit-node node-energy" onclick="showPillarDetail('energy')">
-              <span class="node-icon">🔥</span>
-              <span class="node-label">Energy (Hissiy Energiya)</span>
-            </div>
-            <div class="orbit-node node-edge" onclick="showPillarDetail('edge')">
-              <span class="node-icon">⚡</span>
-              <span class="node-label">Edge (Qat'iyat / Iroda)</span>
-            </div>
-
-            <div class="cycle-arrow arrow-1">↻ Fazilatli O'qitish</div>
-            <div class="cycle-arrow arrow-2">↺ Yangi Avlod Yetakchilari</div>
-          </div>
-
-          <div class="engine-display-panel" id="enginePillarInfo">
-            <div class="panel-badge" id="enginePillarBadge">Tanlangan Bo'g'in</div>
-            <h3 id="enginePillarTitle" class="gradient-text">TPOV: O'rgatiladigan Nuqtai Nazar</h3>
-            <p id="enginePillarDesc">
-              Noel Tichy ta'kidlaganidek, agar rahbar o'z bilim va tajribasini tizimli, oson va tushunarli qilib 
-              boshqalarga o'rgata olmasa, u haqiqiy yetakchi emas. TPOV har bir yetakchining o'z jamoasiga 
-              yetkazishi shart bo'lgan konseptual xaritasidir.
+        <div class="cards-grid">
+          <!-- Karta 1 -->
+          <div class="info-card">
+            <div class="card-num">01</div>
+            <div class="card-icon">⚙️</div>
+            <h3>"Yetakchilik Dvigateli" Nima?</h3>
+            <p>
+              Oddiy korxonalarda hamma buyruqni faqat bitta boshliq beradi. 
+              <strong>"Dvigatel"ga ega korxonalarda esa</strong> har bir bo'g'inda (quyi, o'rta, yuqori) 
+              mas'uliyatni o'z zimmasiga oladigan yetakchilar uzluksiz tarbiyalanadi.
             </p>
-            <div class="panel-metrics">
-              <div class="metric-item">
-                <span class="metric-num">100%</span>
-                <span class="metric-text">O'rgatish orqali rivojlanish</span>
-              </div>
-              <div class="metric-item">
-                <span class="metric-num">4 ta</span>
-                <span class="metric-text">Tizimli fundamental ustun</span>
-              </div>
-              <div class="metric-item">
-                <span class="metric-num">∞</span>
-                <span class="metric-text">Uzluksiz o'rganish tsikli</span>
-              </div>
-            </div>
-            <div class="engine-quote" id="enginePillarQuote">
-              <em>"Muvaffaqiyatli kompaniyalar yetakchilarni chetdan qidirmaydi, ular o'z ichida yetakchilik dvigatelini yaratadi."</em>
-              <span>— Noel M. Tichy</span>
-            </div>
+          </div>
+
+          <!-- Karta 2 -->
+          <div class="info-card">
+            <div class="card-num">02</div>
+            <div class="card-icon">🔄</div>
+            <h3>O'rgatish Orqali O'rganish (Tsikl)</h3>
+            <p>
+              Rahbar o'z bilimini xodimlariga ochiq o'rgatadi. Xodimlar savol beradi va munozara qiladi. 
+              Natijada <strong>rahbarning o'zi ham yangi bilim oladi</strong> va tashkilot to'xtovsiz rivojlanadi.
+            </p>
+          </div>
+
+          <!-- Karta 3 -->
+          <div class="info-card">
+            <div class="card-num">03</div>
+            <div class="card-icon">🏆</div>
+            <h3>Crotonville & General Electric</h3>
+            <p>
+              Noel Tichy General Electric rahbari Jek Uelch bilan birga Krotonvill akademiyasini tuzgan. 
+              Bosh direktor o'z ish vaqtining <strong>50 foizini</strong> bevosita xodimlarni o'qitishga sarflagan 
+              va GE dunyoning eng qimmat kompaniyasiga aylangan.
+            </p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Theoretical Deep-Dive Section -->
-    <section id="about-theory" class="theory-section">
+    <!-- 2-Bo'lim: TPOV (4 Ustun) -->
+    <section id="tpov" class="section section-dark">
       <div class="container">
-        <div class="section-header">
-          <span class="section-tag">Ilmiy-Akademik Asos</span>
-          <h2 class="section-title">Noel Tichy va "Yetakchilik Dvigateli" Nazariyasi</h2>
-          <p class="section-subtitle">
-            Magistratura seminarida talabalar o'zlashtirishi va ilmiy tahlil qilishi lozim bo'lgan asosiy konsepsiyalar
-          </p>
+        <div class="section-title-wrap">
+          <span class="section-badge">2-QISM</span>
+          <h2>TPOV: O'rgatiladigan Nuqtai Nazar</h2>
+          <p>Har bir yetakchi o'z jamoasiga o'rgatishi kerak bo'lgan 4 ta element:</p>
         </div>
 
-        <div class="tabs-control">
-          <button class="tab-btn active" onclick="switchTheoryTab('tichy-bio')">1. Muallif & Asarning Mohiyati</button>
-          <button class="tab-btn" onclick="switchTheoryTab('paradigm-shift')">2. Paradigma O'zgarishi</button>
-          <button class="tab-btn" onclick="switchTheoryTab('teaching-cycle')">3. Fazilatli O'qitish Tsikli</button>
-          <button class="tab-btn" onclick="switchTheoryTab('stories-concept')">4. Yetakchilik Hikoyalari</button>
-        </div>
-
-        <div class="tab-content-container">
-          <!-- Tab 1 -->
-          <div class="tab-pane active" id="tab-tichy-bio">
-            <div class="theory-grid">
-              <div class="theory-article">
-                <h3>Noel M. Tichy kim va nazariya qanday paydo bo'lgan?</h3>
-                <p>
-                  Noel Tichy — Michigan universiteti Ross Biznes maktabining tashkiliy xulq-atvor va kadrlar boshqaruvi professori, 
-                  dunyoga mashhur korporativ maslahatchi. U 1980-yillarda <strong>General Electric (GE)</strong> korporatsiyasining afsonaviy 
-                  <strong>Crotonville Boshqaruv Rivojlanish Markazi</strong>ga rahbarlik qilgan va Jek Uelch (Jack Welch) bilan birgalikda 
-                  tarixdagi eng qudratli korporativ ta'lim tizimini bunyod etgan.
-                </p>
-                <p>
-                  1997-yilda nashr etilgan <em>"The Leadership Engine: How Winning Companies Build Leaders at Every Level"</em> 
-                  (Eli Koen bilan hammualliflikda) asari biznes adabiyotida portlash yasadi. Muallif Fortune 500 ro'yxatidagi yuzlab kompaniyalarni 
-                  tahlil qilib, nega ayrim kompaniyalar yillar davomida barqaror yetakchi bo'lib qolishi, boshqalari esa bitta kuchli CEO ketishi bilan 
-                  inqirozga yuz tutishini o'rgandi.
-                </p>
-                <div class="callout callout-info">
-                  <strong>Magistrantlar uchun asosiy ilmiy xulosa:</strong>
-                  G'olib tashkilotlar yakka shaxs (qahramon rahbar)ga qaram emas. Ular butun tashkilot bo'ylab yetakchilarni uzluksiz tayyorlovchi 
-                  institutsional "Dvigatel" barpo etadilar.
-                </div>
-              </div>
-              <div class="theory-side-card">
-                <div class="stat-box">
-                  <div class="stat-num">14+</div>
-                  <div class="stat-text">Yirik transmilliy korporatsiyalarning 10 yillik tajribasi tahlil qilingan</div>
-                </div>
-                <div class="stat-box">
-                  <div class="stat-num">Crotonville</div>
-                  <div class="stat-text">Boshqaruv tarixidagi birinchi va eng yirik korporativ yetakchilik universiteti</div>
-                </div>
-                <div class="stat-box">
-                  <div class="stat-num">TPOV</div>
-                  <div class="stat-text">Teachable Point of View — har bir xodim bilishi shart bo'lgan yetakchilik qarashi</div>
-                </div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Tab 2 -->
-          <div class="tab-pane" id="tab-paradigm-shift">
-            <div class="comparison-table-wrapper">
-              <h3>An'anaviy Boshqaruv vs. "Yetakchilik Dvigateli" Modeli</h3>
-              <p class="mb-4">Magistratura seminarida ushbu taqqoslash jadvali orqali an'anaviy menejment va Tichy modeli o'rtasidagi tafovutlar tahlil qilinadi:</p>
-              
-              <div class="table-responsive">
-                <table class="academic-table">
-                  <thead>
-                    <tr>
-                      <th>Tahlil Mezoni</th>
-                      <th>An'anaviy Tashkilotlar</th>
-                      <th>"Yetakchilik Dvigateli"ga Ega Tashkilotlar</th>
-                    </tr>
-                  </thead>
-                  <tbody>
-                    <tr>
-                      <td><strong>Yetakchilikka qarash</strong></td>
-                      <td>Faqat yuqori lavozim egalari (CEO, vitse-prezidentlar) yetakchi hisoblanadi.</td>
-                      <td>Har bir bo'g'inda, har bir jamoada yetakchi bo'lishi shart (har bir xodim tashabbuskor).</td>
-                    </tr>
-                    <tr>
-                      <td><strong>Bilim uzatish usuli</strong></td>
-                      <td>HR departamenti yoki tashqi trenerlar vaqti-vaqti bilan trening o'tkazadi.</td>
-                      <td>Amaldagi rahbarlar o'z vaqtining kamida 20-30% ini xodimlarga bevosita ta'lim berishga sarflaydi.</td>
-                    </tr>
-                    <tr>
-                      <td><strong>Qaror qabul qilish (Edge)</strong></td>
-                      <td>Byurokratiya, mas'uliyatni boshqalarga yuklash, qarorlarni paysalga solish.</td>
-                      <td>Aniq, tezkor, o'z vaqtida qabul qilingan qat'iy qarorlar va shaxsiy mas'uliyat.</td>
-                    </tr>
-                    <tr>
-                      <td><strong>Korporativ Madaniyat</strong></td>
-                      <td>Qoidalar, instruksiyalar va ko'r-ko'rona itoatkorlikka asoslangan.</td>
-                      <td>Umumiy qadriyatlar, yuksak energiya va doimiy ochiq muloqotga asoslangan.</td>
-                    </tr>
-                    <tr>
-                      <td><strong>O'rgatish yo'nalishi</strong></td>
-                      <td>Bir tomonlama buyruqlar va direktivalar oqimi.</td>
-                      <td>Fazilatli tsikl: rahbar o'rgatadi va pastdan o'rganadi (ikki tomonlama sinergiya).</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
-            </div>
-          </div>
-
-          <!-- Tab 3 -->
-          <div class="tab-pane" id="tab-teaching-cycle">
-            <div class="theory-grid">
-              <div class="theory-article">
-                <h3>Fazilatli O'qitish Tsikli (The Virtuous Teaching Cycle)</h3>
-                <p>
-                  Noel Tichy konsepsiyasining markaziy yuragi — bu <strong>Fazilatli O'qitish Tsikli</strong>dir. 
-                  Bu jarayon shunchaki ma'ruza o'qish emas. U quyidagi bosqichlardan iborat:
-                </p>
-                <ol class="academic-list">
-                  <li><strong>Rahbar o'z TPOV sini shakllantiradi:</strong> O'z qarashlarini qog'ozga tushiradi, tahlil qiladi va tizimlashtiradi.</li>
-                  <li><strong>Jonli o'qitish jarayoni:</strong> Rahbar auditoriyaga kirib, xodimlar bilan ochiq suhbatlashadi, ularga o'z tajribasi va saboqlarini beradi.</li>
-                  <li><strong>Teskari savollar va tanqid:</strong> Talabalar yoki xodimlar rahbarning qarashlarini shubha ostiga oladi, yangi bozor vaziyatlarini ko'taradi.</li>
-                  <li><strong>Rahbarning o'zgarishi va boyishi:</strong> Rahbar tinglovchilardan yangi g'oyalar oladi, o'z TPOV sini yangilaydi va yanada kuchliroq bo'lib chiqadi.</li>
-                </ol>
-                <div class="callout callout-warning">
-                  <strong>Tichining oltin qoidasi:</strong> 
-                  "Agar siz biron narsani chuqur tushunmoqchi bo'lsangiz, uni boshqalarga o'rgatishga majbur bo'ling. 
-                  O'rgatish — bu o'rganishning eng oliy shaklidir."
-                </div>
-              </div>
-
-              <div class="cycle-flow-card">
-                <div class="cycle-step-badge">1. Tizimlashtirish</div>
-                <div class="cycle-flow-arrow">↓</div>
-                <div class="cycle-step-badge">2. Ochiq Muloqotda O'rgatish</div>
-                <div class="cycle-flow-arrow">↓</div>
-                <div class="cycle-step-badge">3. Savol-Javob va Bahs</div>
-                <div class="cycle-flow-arrow">↓</div>
-                <div class="cycle-step-badge">4. Yangi Bilim va Yangilanish</div>
-                <div class="cycle-flow-arrow">🔄 (Tsikl takrorlanadi)</div>
-              </div>
-            </div>
-          </div>
-
-          <!-- Tab 4 -->
-          <div class="tab-pane" id="tab-stories-concept">
-            <div class="theory-grid">
-              <div class="theory-article">
-                <h3>Yetakchilik Hikoyalarining 3 Turi (Leadership Stories)</h3>
-                <p>
-                  Noel Tichy aytadiki, quruq raqamlar va jadvallar odamlarni ilhomlantira olmaydi. 
-                  Haqiqiy yetakchi o'z jamoasiga doimo 3 ta hikoyani so'zlab berishi kerak:
-                </p>
-
-                <div class="story-type-card">
-                  <div class="story-header">
-                    <span class="story-num">I</span>
-                    <h4>"Biz kim edik?" (O'tmish hikoyasi)</h4>
-                  </div>
-                  <p>
-                    Tashkilotning ildizlari, bosib o'tgan og'ir yo'li, qilingan xatolar va ulardan olingan saboqlar. 
-                    Bu hikoya jamoaga o'zligini va ildizini his qilishga yordam beradi.
-                  </p>
-                </div>
-
-                <div class="story-type-card">
-                  <div class="story-header">
-                    <span class="story-num">II</span>
-                    <h4>"Biz hozir kimmiz?" (Hozirgi kun haqiqati)</h4>
-                  </div>
-                  <p>
-                    Bozordagi real holatimiz, kuchli va zaif tomonlarimiz, mavjud xavf-xatarlar va ichki resurslarimiz. 
-                    Noqulay haqiqatni yashirmasdan, xodimlar bilan ochiq va haqqoniy gaplashish.
-                  </p>
-                </div>
-
-                <div class="story-type-card">
-                  <div class="story-header">
-                    <span class="story-num">III</span>
-                    <h4>"Biz qayerga boryapmiz?" (Kelajak qarashlari)</h4>
-                  </div>
-                  <p>
-                    Oldimizda turgan buyuk maqsad, nima uchun aynan shu yo'nalishni tanlaganimiz va har bir insonning 
-                    ushbu g'alabada qanday o'rni borligi. Bu hikoya hissiy energiyani alanga oldiradi.
-                  </p>
-                </div>
-              </div>
-              <div class="theory-side-card">
-                <div class="highlight-quote-box">
-                  <span class="quote-mark">“</span>
-                  <p>Yetakchilik — bu odamlar ongida yangi kelajak tasvirini chizish va ularni shu tasvir sari olib borish san'atidir.</p>
-                  <small>— Noel Tichy</small>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- TPOV Framework Section -->
-    <section id="tpov-framework" class="tpov-section">
-      <div class="container">
-        <div class="section-header text-center">
-          <span class="section-tag">Asosiy Mexanizm</span>
-          <h2 class="section-title">TPOV: O'rgatiladigan Nuqtai Nazar Konsepsiyasi</h2>
-          <p class="section-subtitle">
-            Teachable Point of View (TPOV) — yetakchining o'z tajribasini boshqalarga o'rgata oladigan darajada 
-            aniq shakllangan 4 ta ustunli qarashlar tizimi
-          </p>
-        </div>
-
-        <div class="tpov-cards-container">
-          <!-- Card 1 -->
-          <div class="tpov-card card-ideas">
-            <div class="tpov-card-top">
-              <span class="tpov-letter">I</span>
+        <div class="tpov-grid">
+          <div class="tpov-box">
+            <div class="tpov-header">
               <span class="tpov-icon">💡</span>
+              <h4>1. G'oyalar (Ideas)</h4>
             </div>
-            <h3>G'oyalar (Ideas)</h3>
-            <p class="tpov-subtitle">Bozor va strategik fikrlash</p>
-            <div class="tpov-content">
-              <ul>
-                <li>Kompaniya qanday qilib pul ishlab topadi va qiymat yaratadi?</li>
-                <li>Raqobatchilardan ustunlik beruvchi asosiy farqimiz nima?</li>
-                <li>Kelasi 3-5 yilda bozor va mijozlar ehtiyoji qanday o'zgaradi?</li>
-              </ul>
-              <div class="tpov-example">
-                <strong>Amaliy misol:</strong> Jek Uelchning "Bozorda 1- yoki 2-o'rinda bo'l, aks holda bu biznesdan chiq" degan g'oyasi.
-              </div>
-            </div>
+            <p class="tpov-summary"><strong>Savol:</strong> Korxonamiz qanday qilib yutadi va qiymat yaratadi?</p>
+            <p class="tpov-detail">Rahbar butun jamoaga biznesning asosiy maqsadini oddiy so'zlar bilan tushuntira olishi shart.</p>
           </div>
 
-          <!-- Card 2 -->
-          <div class="tpov-card card-values">
-            <div class="tpov-card-top">
-              <span class="tpov-letter">V</span>
+          <div class="tpov-box">
+            <div class="tpov-header">
               <span class="tpov-icon">⚖️</span>
+              <h4>2. Qadriyatlar (Values)</h4>
             </div>
-            <h3>Qadriyatlar (Values)</h3>
-            <p class="tpov-subtitle">Axloqiy kompas va madaniyat</p>
-            <div class="tpov-content">
-              <ul>
-                <li>Biz qaysi tamoyillardan hech qachon voz kechmaymiz?</li>
-                <li>Biz qanday xulq-atvorni rag'batlantiramiz va nimaga aslo toqat qilmaymiz?</li>
-                <li>Qadriyatlar faqat qog'ozdami yoki har kungi amaliyotdami?</li>
-              </ul>
-              <div class="tpov-example">
-                <strong>Amaliy misol:</strong> Halollik, mijozga sadoqat, xatolardan qo'rqmasdan o'rganish madaniyati.
-              </div>
-            </div>
+            <p class="tpov-summary"><strong>Savol:</strong> Biz qaysi tamoyillardan hech qachon voz kechmaymiz?</p>
+            <p class="tpov-detail">Halollik, sifat va o'zaro hurmat. Bular faqat devorga yozilgan qog'oz emas, kundalik amal bo'lishi kerak.</p>
           </div>
 
-          <!-- Card 3 -->
-          <div class="tpov-card card-energy">
-            <div class="tpov-card-top">
-              <span class="tpov-letter">E</span>
+          <div class="tpov-box">
+            <div class="tpov-header">
               <span class="tpov-icon">🔥</span>
+              <h4>3. Hissiy Energiya (Energy)</h4>
             </div>
-            <h3>Hissiy Energiya (Energy)</h3>
-            <p class="tpov-subtitle">Motivatsiya va ilhomlantirish</p>
-            <div class="tpov-content">
-              <ul>
-                <li>Rahbar jamoani charchoq va tushkunlikdan qanday olib chiqadi?</li>
-                <li>Odamlarning ichki g'ururi va maqsadga intilishini qanday uyg'otadi?</li>
-                <li>Rahbar o'zi pozitiv energiya manbai bo'la olyaptimi?</li>
-              </ul>
-              <div class="tpov-example">
-                <strong>Amaliy misol:</strong> Qiyin krizis vaziyatida ham xodimlarga ishonch bag'ishlab, yangi marralar sari yetaklash.
-              </div>
-            </div>
+            <p class="tpov-summary"><strong>Savol:</strong> Jamoani qanday qilib harakatga keltiramiz?</p>
+            <p class="tpov-detail">Odamlarni qo'rqitish orqali emas, ishonch, optimizm va ilhomlantirish orqali kuch bag'ishlash.</p>
           </div>
 
-          <!-- Card 4 -->
-          <div class="tpov-card card-edge">
-            <div class="tpov-card-top">
-              <span class="tpov-letter">E</span>
+          <div class="tpov-box">
+            <div class="tpov-header">
               <span class="tpov-icon">⚡</span>
+              <h4>4. Qat'iyatlilik (Edge)</h4>
             </div>
-            <h3>Qat'iyatlilik (Edge)</h3>
-            <p class="tpov-subtitle">Qat'iy va noqulay qarorlar</p>
-            <div class="tpov-content">
-              <ul>
-                <li>Qiyin va og'riqli "Yo'q" degan javobni bera olasizmi?</li>
-                <li>Natija ko'rsatmayotgan xodimlar bilan xayrlashishga irodangiz yetadimi?</li>
-                <li>Noaniqlik sharoitida tavakkal qilib qaror qabul qilish tezligi.</li>
-              </ul>
-              <div class="tpov-example">
-                <strong>Amaliy misol:</strong> Istiqbolsiz loyihani o'z vaqtida yopish va resurslarni istiqbolli jamoaga yo'naltirish.
-              </div>
-            </div>
+            <p class="tpov-summary"><strong>Savol:</strong> Qiyin qarorlarni tez qabul qila olasizmi?</p>
+            <p class="tpov-detail">Noqulay haqiqatni aytish, natija bermagan ishni yopish va aniq "Ha" yoki "Yo'q" deya olish mahorati.</p>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- Real World Case Studies Section -->
-    <section id="cases-section" class="cases-section">
+    <!-- 3-Bo'lim: Seminar Slaydlari (Dars O'tish Uchun Qulay) -->
+    <section id="slides" class="section">
       <div class="container">
-        <div class="section-header">
-          <span class="section-tag">Amaliy Tahlil</span>
-          <h2 class="section-title">Dunyo Tajribasi: "Yetakchilik Dvigateli" Amalda</h2>
-          <p class="section-subtitle">
-            Magistratura seminarida talabalar guruhlarga bo'linib tahlil qilishi mumkin bo'lgan real korporativ keyslar
-          </p>
+        <div class="section-title-wrap">
+          <span class="section-badge">3-QISM</span>
+          <h2>📽️ Seminar Taqdimoti (Oddiy Slaydlar)</h2>
+          <p>Talabalar proyektor orqali dars o'tishlariga moslangan oson slaydlar ko'rinishi:</p>
         </div>
 
-        <div class="cases-grid">
-          <!-- Case 1 -->
-          <div class="case-card">
-            <div class="case-header">
-              <span class="case-tag">1-Keys: Flagman Model</span>
-              <h3>General Electric (Crotonville Tajribasi)</h3>
-              <p class="case-meta">Rahbar: Jek Uelch & Noel Tichy | Soha: Diversifikatsiyalangan sanoat</p>
-            </div>
-            <div class="case-body">
-              <p>
-                General Electric kompaniyasining Krotonvill markazi shunchaki trening markazi emas, balki "Yetakchilik fabrikasi"ga aylantirildi. 
-                Jek Uelch o'z ish vaqtining yarmidan ko'pini shu yerda o'tkazdi. U xodimlarni bevosita o'zi o'qitdi, 
-                ular bilan ochiq bahslashdi va har bir menejerdan o'z xodimlarini o'qituvchi yetakchi bo'lishni talab qildi.
-              </p>
-              <div class="case-keypoints">
-                <strong>Olingan natija:</strong> GE dunyodagi eng qimmat kompaniyaga aylandi va uning yetakchilari keyinchalik 
-                boshqa yuzlab yirik korporatsiyalarga rahbar bo'lib yetishdi.
-              </div>
-            </div>
-            <div class="case-footer">
-              <button class="btn btn-outline btn-sm" onclick="openCaseDiscussion('ge')">Keys Munozara Savollari</button>
+        <div class="slide-deck-box">
+          <div class="slide-header-bar">
+            <span class="slide-indicator" id="slideIndicator">1 / 6 - Slayd</span>
+            <div class="slide-buttons">
+              <button class="slide-nav-btn" onclick="prevSlide()">◀ Oldingi</button>
+              <button class="slide-nav-btn slide-next-btn" onclick="nextSlide()">Keyingi ▶</button>
             </div>
           </div>
 
-          <!-- Case 2 -->
-          <div class="case-card">
-            <div class="case-header">
-              <span class="case-tag">2-Keys: CEO Ustaxonasi</span>
-              <h3>PepsiCo (Rojer Enriko Modeli)</h3>
-              <p class="case-meta">Rahbar: Roger Enrico | Soha: FMCG & Ichimliklar</p>
-            </div>
-            <div class="case-body">
-              <p>
-                Rojer Enriko PepsiCo bosh direktori bo'lganida o'z maoshining katta qismidan voz kechib, 
-                kompaniyadagi eng iqtidorli 100 nafar yosh rahbarlar uchun o'z shaxsiy qarorgohida "Liderlik Dasturi" tashkil etdi. 
-                U ularga o'z TPOV sini o'rgatdi va har biridan kompaniyada 100 million dollarlik o'sish beruvchi yangi loyiha himoyasini qabul qildi.
-              </p>
-              <div class="case-keypoints">
-                <strong>Olingan natija:</strong> Yangi yetakchilar to'lqini shakllandi, Frito-Lay va Pepsi brendlari global miqyosda Coca-Cola bilan 
-                raqobatda misli ko'rilmagan o'sishga erishdi.
-              </div>
-            </div>
-            <div class="case-footer">
-              <button class="btn btn-outline btn-sm" onclick="openCaseDiscussion('pepsico')">Keys Munozara Savollari</button>
-            </div>
+          <!-- Slayd Maydoni -->
+          <div class="slide-view" id="slideView">
+            <!-- JavaScript orqali to'ldiriladi -->
           </div>
 
-          <!-- Case 3 -->
-          <div class="case-card">
-            <div class="case-header">
-              <span class="case-tag">3-Keys: Milliy Boshqaruv</span>
-              <h3>O'zbekiston Davlat va Korporativ Sektori</h3>
-              <p class="case-meta">Qo'llash maydoni: Vazirliklar, Banklar, Yirik korxonalar</p>
-            </div>
-            <div class="case-body">
-              <p>
-                O'zbekistonda zamonaviy menejmentga o'tish davrida asosiy muammo — bu "o'rta bo'g'in yetakchilari tanqisligi"dir. 
-                Yuqori rahbarlar barcha qarorlarni o'zlari qabul qilishga majbur bo'lmoqda. Noel Tichining TPOV konsepsiyasini 
-                vazirliklar va yirik kompaniyalarda joriy etish orqali har bir bo'lim boshlig'ini o'rgatuvchi yetakchiga aylantirish mumkin.
-              </p>
-              <div class="case-keypoints">
-                <strong>Olingan natija:</strong> Tashkiliy byurokratiya qisqaradi, kadrlar qo'nimsizligi kamayadi va yosh rahbarlar tezroq yetishib chiqadi.
-              </div>
-            </div>
-            <div class="case-footer">
-              <button class="btn btn-outline btn-sm" onclick="openCaseDiscussion('uzb')">Keys Munozara Savollari</button>
-            </div>
+          <!-- Spikerga Yordamchi Eslatma -->
+          <div class="speaker-hint">
+            <strong>🎙️ Dars o'tuvchi talaba uchun eslatma:</strong>
+            <span id="speakerHintText">Slayd bo'yicha gapirish lozim bo'lgan fikr...</span>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- EXECUTIVE SIMULATOR GAME SECTION (FOR ADULT LEARNERS & MASTERS) -->
-    <section id="simulator-game" class="game-section">
+    <!-- 4-Bo'lim: O'YIN-TEST (ABCD KVIZ) -->
+    <section id="quiz-game" class="section section-game">
       <div class="container">
-        <div class="section-header text-center">
-          <div class="badge-executive">Boshqaruv Simulyatsiyasi</div>
-          <h2 class="section-title">"Yetakchilik Dvigateli: Boshqaruv Krizisi" Simulyatori</h2>
-          <p class="section-subtitle">
-            Magistrantlar va rahbarlar uchun maxsus situatsion-strategik o'yin. Siz korporatsiya rahbarisiz. 
-            Noel Tichy tamoyillari (Ideas, Values, Energy, Edge) asosida krizisli vaziyatlarda qaror qabul qiling va 
-            tashkilotingiz yetakchilik dvigatelini qanchalik quvvatlay olishingizni sinab ko'ring!
-          </p>
+        <div class="section-title-wrap">
+          <span class="section-badge badge-game">🎮 O'YIN-TEST</span>
+          <h2>Noel Tichy Bilimlar Sinovi (ABCD)</h2>
+          <p>Mavzuni qanchalik tushunganingizni tekshiring! 10 ta qiziqarli savol, to'g'ri javobni tanlang va ball to'plang.</p>
         </div>
 
-        <div class="game-app-wrapper" id="gameAppContainer">
-          <!-- Game Header Status Bar -->
-          <div class="game-hud">
-            <div class="hud-item">
-              <span class="hud-label">Tashkilot Dvigateli Quvvati</span>
-              <div class="progress-bar-wrap">
-                <div class="progress-fill engine-bar" id="hudEngineBar" style="width: 50%;"></div>
+        <div class="game-container">
+          <!-- O'yin Boshqaruv Qatori -->
+          <div class="game-top">
+            <div class="game-progress">
+              <span id="qCountText">1-savol (Jami 10 ta)</span>
+              <div class="progress-track">
+                <div class="progress-bar" id="gameProgressBar" style="width: 10%;"></div>
               </div>
-              <span class="hud-value" id="hudEngineVal">50%</span>
             </div>
-
-            <div class="hud-item">
-              <span class="hud-label">Jamoa Ishonchi & Madaniyat</span>
-              <div class="progress-bar-wrap">
-                <div class="progress-fill trust-bar" id="hudTrustBar" style="width: 50%;"></div>
-              </div>
-              <span class="hud-value" id="hudTrustVal">50%</span>
-            </div>
-
-            <div class="hud-item">
-              <span class="hud-label">Strategik Natijadorlik (Edge)</span>
-              <div class="progress-bar-wrap">
-                <div class="progress-fill edge-bar" id="hudEdgeBar" style="width: 50%;"></div>
-              </div>
-              <span class="hud-value" id="hudEdgeVal">50%</span>
-            </div>
-
-            <div class="hud-scenario-tracker">
-              <span class="tracker-label">Krizis Bosqichi:</span>
-              <span class="tracker-val" id="hudStageVal">1 / 5</span>
+            <div class="game-score">
+              To'plangan Ball: <strong id="gameScoreVal">0</strong>
             </div>
           </div>
 
-          <!-- Scenario Screen -->
-          <div class="game-screen" id="gameScreen">
-            <div class="scenario-card" id="scenarioCard">
-              <div class="scenario-badge" id="scenarioBadge">1-Krizis: Texnologik Inqilob & Bozor O'zgarishi</div>
-              <h3 class="scenario-title" id="scenarioTitle">Kompaniyangiz Asosiy Mahsuloti Eskirmoqda</h3>
-              <p class="scenario-desc" id="scenarioDesc">
-                Bozorga yangi sun'iy intellekt va raqamli texnologiyalar kirib keldi. Sizning an'anaviy mahsulotingizga talab 40% ga tushdi. 
-                O'rta bo'g'in menejerlari vahimada, xodimlar ish o'rinlarini yo'qotishdan qo'rqmoqda. Direktorlar kengashi zudlik bilan 
-                reja talab qilmoqda. Noel Tichy shogirdi sifatida qanday yo'l tutasiz?
-              </p>
+          <!-- Savol Kartasi -->
+          <div class="quiz-card" id="quizCard">
+            <h3 class="question-text" id="quizQuestionText">Savol yuklanmoqda...</h3>
 
-              <div class="scenario-options" id="scenarioOptions">
-                <!-- Options will be dynamically rendered by JS -->
-              </div>
+            <!-- Variantlar (ABCD) -->
+            <div class="options-grid" id="optionsContainer">
+              <!-- Dynamically rendered -->
             </div>
 
-            <!-- Feedback Modal/Overlay after decision -->
-            <div class="decision-feedback-panel" id="decisionFeedback" style="display: none;">
-              <div class="feedback-badge" id="feedbackTypeBadge">Qaror Tahlili</div>
-              <h4 id="feedbackTitle">Qaroringiz Oqibati</h4>
-              <p id="feedbackText">Tahlil matni...</p>
-              <div class="feedback-changes" id="feedbackChanges"></div>
-              <button class="btn btn-primary" id="feedbackNextBtn" onclick="nextScenario()">Keyingi Krizisga O'tish ➔</button>
+            <!-- Tushuntirish qutisi (Javob berilgach chiqadi) -->
+            <div class="feedback-box" id="quizFeedbackBox" style="display: none;">
+              <div class="feedback-status" id="feedbackStatus">To'g'ri!</div>
+              <p id="feedbackExplanation">Tushuntirish matni...</p>
+              <button class="btn btn-primary btn-sm" id="nextQuestionBtn" onclick="nextQuestion()">Keyingi Savol ➔</button>
             </div>
+          </div>
 
-            <!-- Final Result Screen -->
-            <div class="game-results-panel" id="gameResults" style="display: none;">
-              <div class="results-trophy">🏆</div>
-              <h2 id="resultArchetype">Transformatsion O'rgatuvchi Yetakchi</h2>
-              <p class="result-score-summary" id="resultSummary">Sizning boshqaruv qarorlaringiz Noel Tichining barcha tamoyillariga to'la mos keldi!</p>
-              
-              <div class="results-stats-grid">
-                <div class="res-stat-card">
-                  <span class="res-stat-val" id="resEngine">85%</span>
-                  <span class="res-stat-title">Yetakchilik Dvigateli</span>
-                </div>
-                <div class="res-stat-card">
-                  <span class="res-stat-val" id="resTrust">80%</span>
-                  <span class="res-stat-title">Madaniyat & Ishonch</span>
-                </div>
-                <div class="res-stat-card">
-                  <span class="res-stat-val" id="resEdge">90%</span>
-                  <span class="res-stat-title">Qat'iyatlilik & Edge</span>
-                </div>
-              </div>
-
-              <div class="academic-tichy-feedback" id="tichyAcademicFeedback">
-                <!-- In-depth analysis based on Noel Tichy's theory -->
-              </div>
-
-              <div class="results-action-group">
-                <button class="btn btn-primary" onclick="restartGame()">🔄 Simulyatorni Qayta O'ynash</button>
-                <a href="#tpov-builder" class="btn btn-outline">📝 Shaxsiy TPOV Pasportingizni Yarating</a>
-              </div>
-            </div>
+          <!-- Natija Kartasi (10 ta savoldan so'ng) -->
+          <div class="results-card" id="resultsCard" style="display: none;">
+            <div class="results-icon">🏆</div>
+            <h3 id="resultsTitle">Sinov Yakunlandi!</h3>
+            <p class="results-score" id="resultsScoreText">Siz 10 ta savoldan 8 tasiga to'g'ri javob berdingiz.</p>
+            <div class="results-badge" id="resultsRankBadge">Yetakchi Murabbiy</div>
+            <p class="results-desc" id="resultsDescText">A'lo natija! Siz Noel Tichining yetakchilik dvigateli nazariyasini chuqur tushungansiz.</p>
+            <button class="btn btn-primary" onclick="restartQuiz()">🔄 Qaytadan O'ynash</button>
           </div>
         </div>
       </div>
     </section>
 
-    <!-- INTERACTIVE TPOV BUILDER & PASSPORT WORKSHOP -->
-    <section id="tpov-builder" class="tpov-workshop-section">
+    <!-- 5-Bo'lim: Seminar Munozarasi & Savollari -->
+    <section class="section">
       <div class="container">
-        <div class="section-header text-center">
-          <span class="section-tag">Amaliy Seminar Topshirig'i</span>
-          <h2 class="section-title">Shaxsiy TPOV (Yetakchilik Pasporti) Konstruktori</h2>
-          <p class="section-subtitle">
-            Magistrantlar uchun seminar mashg'uloti: O'zingizning shaxsiy "O'rgatiladigan Nuqtai Nazar"ingizni yarating. 
-            Yakunda rasmiy "Yetakchilik TPOV Pasporti" shakllanadi va uni seminarda himoya qilish mumkin!
-          </p>
+        <div class="section-title-wrap">
+          <span class="section-badge">5-QISM</span>
+          <h2>Magistratura Uchun 3 Ta Asosiy Munozara Savoli</h2>
+          <p>Seminarda talabalar o'rtasida qizg'in bahs tashkil qilish uchun:</p>
         </div>
 
-        <div class="tpov-builder-grid">
-          <!-- Form Inputs -->
-          <div class="builder-form-card">
-            <div class="builder-step-header">
-              <span class="step-counter" id="tpovStepIndicator">1 / 5 - Qadam</span>
-              <h3 id="tpovStepTitle">1. Sizning Boshqaruv G'oyangiz (Ideas)</h3>
-            </div>
-
-            <div class="form-group">
-              <label for="userNameInput">Ism-familiyangiz va guruhingiz:</label>
-              <input type="text" id="userNameInput" class="form-input" placeholder="Masalan: Sardor Aliyev, 2-kurs magistrant">
-            </div>
-
-            <!-- Dynamic step contents -->
-            <div id="tpovFormStepContainer">
-              <!-- Step 1: Ideas -->
-              <div class="tpov-step-fields active" id="stepField1">
-                <label>Siz rahbarlik qilayotgan soha yoki loyihada qanday BOSH G'OYA (Idea) yotadi?</label>
-                <p class="field-hint">Noel Tichy: G'oya tashkilotning qanday qilib qiymat yaratishi va bozorda g'olib bo'lishini tushuntirishi shart.</p>
-                <textarea id="tpovIdeasInput" class="form-textarea" rows="4" placeholder="Masalan: Biz mijozlarga shunchaki xizmat ko'rsatmaymiz, balki ularning biznes jarayonlarini to'liq avtomatlashtirish orqali vaqtlarini 3 barobar tejaymiz..."></textarea>
-              </div>
-
-              <!-- Step 2: Values -->
-              <div class="tpov-step-fields" id="stepField2">
-                <label>Murosa qilinmaydigan 3 ta asosiy Qadriyatingiz (Values):</label>
-                <p class="field-hint">Noel Tichy: Qadriyatlar — bu har qanday vaziyatda, hatto foydadan voz kechish kerak bo'lsa ham amal qilinadigan qat'iy mezonlardir.</p>
-                <input type="text" id="tpovValue1" class="form-input mb-2" placeholder="1-qadriyat: Masalan: Halollik va shaffoflik">
-                <input type="text" id="tpovValue2" class="form-input mb-2" placeholder="2-qadriyat: Masalan: Xatolardan qo'rqmaslik va doimiy o'rganish">
-                <input type="text" id="tpovValue3" class="form-input" placeholder="3-qadriyat: Masalan: O'zaro hurmat va insonparvarlik">
-              </div>
-
-              <!-- Step 3: Emotional Energy -->
-              <div class="tpov-step-fields" id="stepField3">
-                <label>Jamoangizga qanday qilib Hissiy Energiya (Energy) berasiz?</label>
-                <p class="field-hint">Noel Tichy: Rahbar odamlarning ichki kuchini, qiziqishini va motivatsiyasini qanday alangalatadi?</p>
-                <textarea id="tpovEnergyInput" class="form-textarea" rows="4" placeholder="Masalan: Men jamoaning har bir kichik g'alabasini e'tirof etaman, ularga katta mustaqillik beraman va qiyinchiliklarda birinchi bo'lib yordamga kelaman..."></textarea>
-              </div>
-
-              <!-- Step 4: Edge -->
-              <div class="tpov-step-fields" id="stepField4">
-                <label>Qat'iy qaror qabul qilish mezoningiz (Edge):</label>
-                <p class="field-hint">Noel Tichy: Edge — qiyin paytlarda shaxsiy mas'uliyatni olib, noqulay haqiqatni aytish va qat'iy qaror qilishdir.</p>
-                <textarea id="tpovEdgeInput" class="form-textarea" rows="4" placeholder="Masalan: Agar xodim jamoa qadriyatlarini buzsa yoki bila turib mas'uliyatsizlik qilsa, qanchalik iqtidorli bo'lmasin, men u bilan qat'iy xayrlashaman..."></textarea>
-              </div>
-
-              <!-- Step 5: Story -->
-              <div class="tpov-step-fields" id="stepField5">
-                <label>Sizning Yetakchilik Tarixingiz (Story):</label>
-                <p class="field-hint">Noel Tichy: "Biz kim edik, hozir kimmiz va qayerga ketyapmiz?"</p>
-                <textarea id="tpovStoryInput" class="form-textarea" rows="4" placeholder="Masalan: Biz kichik startap sifatida boshlagan edik, bugun sohada ishonchli hamkormiz, maqsadimiz — Markaziy Osiyodagi 1-raqamli platformaga aylanish..."></textarea>
-              </div>
-            </div>
-
-            <div class="builder-nav-buttons">
-              <button class="btn btn-glass" id="tpovPrevBtn" onclick="prevTpovStep()" disabled>Ortga</button>
-              <button class="btn btn-primary" id="tpovNextBtn" onclick="nextTpovStep()">Keyingisi ➔</button>
-            </div>
+        <div class="debate-grid">
+          <div class="debate-card">
+            <span class="debate-num">1</span>
+            <h4>Tug'mami yoki O'rganiladimi?</h4>
+            <p>Yetakchilik tug'ma iqtidor deb hisoblanadimi yoki Tichy aytganidek, har bir xodimga o'rgatish mumkin bo'lgan mahoratmi?</p>
           </div>
 
-          <!-- Live Preview Passport Card -->
-          <div class="passport-preview-card" id="passportLiveCard">
-            <div class="passport-watermark">TICHY TPOV</div>
-            <div class="passport-header">
-              <div class="passport-badge">O'RGATILADIGAN NUQTAI NAZAR (TPOV)</div>
-              <div class="passport-id" id="passportIdDisplay">ID: TICHY-2026-001</div>
-            </div>
-
-            <div class="passport-user">
-              <div class="passport-avatar">👨‍💼</div>
-              <div class="passport-meta">
-                <h4 id="prevUserName">Ism-familiya kiritilmagan</h4>
-                <span>Tashkiliy Yetakchi & Murabbiy</span>
-              </div>
-            </div>
-
-            <div class="passport-body">
-              <div class="pass-section">
-                <span class="pass-tag">💡 Boshqaruv G'oyasi:</span>
-                <p id="prevUserIdea">G'oya kiritilmoqda...</p>
-              </div>
-
-              <div class="pass-section">
-                <span class="pass-tag">⚖️ 3 Asosiy Qadriyat:</span>
-                <div class="pass-values-chips" id="prevUserValues">
-                  <span class="chip">1-Qadriyat</span>
-                  <span class="chip">2-Qadriyat</span>
-                  <span class="chip">3-Qadriyat</span>
-                </div>
-              </div>
-
-              <div class="pass-section">
-                <span class="pass-tag">🔥 Hissiy Energiya Manbai:</span>
-                <p id="prevUserEnergy">Energiya uslubi...</p>
-              </div>
-
-              <div class="pass-section">
-                <span class="pass-tag">⚡ Qat'iyatlilik (Edge):</span>
-                <p id="prevUserEdge">Qaror mezoni...</p>
-              </div>
-
-              <div class="pass-section">
-                <span class="pass-tag">📜 Yetakchilik Hikoyasi:</span>
-                <p id="prevUserStory">Hikoya qisqacha...</p>
-              </div>
-            </div>
-
-            <div class="passport-footer">
-              <div class="pass-stamp">NOEL TICHY METHODOLOGY VERIFIED</div>
-              <button class="btn btn-outline btn-sm print-hide" onclick="printPassport()">🖨️ Pasportni Chop Etish / Saqlash</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
-
-    <!-- SEMINAR INTERACTIVE TOOLS & DEBATE SECTION -->
-    <section id="seminar-tools" class="seminar-tools-section">
-      <div class="container">
-        <div class="section-header">
-          <span class="section-tag">Magistratura O'quv Jarayoni</span>
-          <h2 class="section-title">Seminar Mashg'ulotlari & Ilmiy Bahs Doskasi</h2>
-          <p class="section-subtitle">
-            Dars o'tuvchi talaba va o'qituvchi uchun auditoriyada jonli interaktiv muhit yaratuvchi vositalar
-          </p>
-        </div>
-
-        <div class="tools-grid">
-          <!-- Tool 1: Debate Prompts -->
-          <div class="tool-card">
-            <div class="tool-icon">🎙️</div>
-            <h3>Ilmiy Bahs (Debat) Maydoni</h3>
-            <p>Auditoriyani 2 guruhga ajratib, Noel Tichy nazariyasi bo'yicha ilmiy bahs uyushtirish mavzulari:</p>
-            <div class="debate-topics-list">
-              <div class="debate-item">
-                <strong>1-Mavzu:</strong> "Yetakchilik — tug'ma xususiyatmi yoki Tichy aytganidek o'rgatsa bo'ladigan mahoratmi?"
-              </div>
-              <div class="debate-item">
-                <strong>2-Mavzu:</strong> "Tashkilotdagi barcha rahbarlar o'rgatuvchi bo'lishi shartmi yoki mutaxassis bo'lib qolgani ma'qulmi?"
-              </div>
-              <div class="debate-item">
-                <strong>3-Mavzu:</strong> "Krizis paytida 'Edge' (qattiqqo'llik) muhimroqmi yoki 'Values' (insoniy qadriyatlar)mi?"
-              </div>
-            </div>
+          <div class="debate-card">
+            <span class="debate-num">2</span>
+            <h4>Rahbar Vaqti Qayerga Ketishi Kerak?</h4>
+            <p>Katta korxona rahbari o'z ish vaqtining 50 foizini xodimlarni o'qitishga sarflashi to'g'rimi yoki bu vaqtni yo'qotishmi?</p>
           </div>
 
-          <!-- Tool 2: Evaluation Rubric -->
-          <div class="tool-card">
-            <div class="tool-icon">📊</div>
-            <h3>Seminar Baholash Mezonlari (Rubrics)</h3>
-            <p>Talabalarning seminar chiqishlarini baholash uchun 100 ballik Tichy shkalasi:</p>
-            <ul class="rubric-list">
-              <li><strong>Nazariyani tushunish (25 ball):</strong> TPOV, 4 ustun va Virtuous Cycle mohiyatini ilmiy asoslab berish.</li>
-              <li><strong>Amaliy keys tahlili (25 ball):</strong> GE, PepsiCo yoki O'zbekiston misolida aniq tahlil.</li>
-              <li><strong>O'z TPOV sini taqdim etish (25 ball):</strong> Shaxsiy boshqaruv qarashlarini himoya qila olishi.</li>
-              <li><strong>Auditoriya bilan ishlash (25 ball):</strong> Savollarga javob berish va munozarani boshqarish mahorati.</li>
-            </ul>
-          </div>
-
-          <!-- Tool 3: Quiz/Test -->
-          <div class="tool-card">
-            <div class="tool-icon">🧠</div>
-            <h3>Blits-Test: Bilimlarni Sinash</h3>
-            <p>Seminar so'ngida magistrantlarning mavzuni qanday o'zlashtirganini 5 daqiqada tekshiruvchi interaktiv kviz.</p>
-            <div class="quiz-status-box">
-              <span id="quizQuestionsCount">10 ta ilmiy-amaliy savol</span>
-              <button class="btn btn-primary btn-sm" onclick="startQuickQuiz()">Kvizni Boshlash ➔</button>
-            </div>
+          <div class="debate-card">
+            <span class="debate-num">3</span>
+            <h4>O'zbekistonda Qo'llash Mumkinmi?</h4>
+            <p>Bizning mahalliy korxonalarda rahbarlar o'z o'rnini yoshlarga bo'shatib berishdan qo'rqmasdan murabbiy bo'la oladilarmi?</p>
           </div>
         </div>
       </div>
     </section>
   </main>
 
-  <!-- Interactive Quiz Modal -->
-  <div class="modal-overlay" id="quizModal" style="display: none;">
-    <div class="modal-window">
-      <div class="modal-header">
-        <h3>🧠 Noel Tichy Nazariyasi: Magistratura Blits-Kviz</h3>
-        <button class="modal-close" onclick="closeQuizModal()">✕</button>
-      </div>
-      <div class="modal-body" id="quizModalBody">
-        <div class="quiz-progress-bar">
-          <div class="quiz-progress-fill" id="quizProgressFill" style="width: 10%;"></div>
-        </div>
-        <div class="quiz-question-container">
-          <span class="quiz-q-num" id="quizQNum">1-savol</span>
-          <h4 class="quiz-q-text" id="quizQText">Savol matni yuklanmoqda...</h4>
-          <div class="quiz-answers" id="quizAnswersContainer">
-            <!-- Dynamically populated -->
-          </div>
-        </div>
-        <div class="quiz-explanation" id="quizExplanation" style="display: none;">
-          <strong>Noel Tichy izohi:</strong>
-          <p id="quizExplanationText"></p>
-          <button class="btn btn-primary btn-sm mt-3" id="quizNextBtn" onclick="nextQuizQuestion()">Keyingi savol ➔</button>
-        </div>
-      </div>
-    </div>
-  </div>
-
-  <!-- Case Discussion Modal -->
-  <div class="modal-overlay" id="caseModal" style="display: none;">
-    <div class="modal-window">
-      <div class="modal-header">
-        <h3 id="caseModalTitle">Keys Tahlili & Seminar Savollari</h3>
-        <button class="modal-close" onclick="closeCaseModal()">✕</button>
-      </div>
-      <div class="modal-body" id="caseModalBody">
-        <!-- Content injected dynamically -->
-      </div>
-    </div>
-  </div>
-
-  <!-- FULLSCREEN INTERACTIVE PRESENTATION / SLIDES MODE -->
-  <div class="presentation-mode-container" id="presentationContainer" style="display: none;">
-    <!-- Slides Top Bar -->
-    <div class="slides-top-bar">
-      <div class="slides-branding">
-        <span class="slides-logo">⚡ NOEL TICHY: YETAKCHILIK DVIGATELI</span>
-        <span class="slides-magistratura">Magistratura Ilmiy Seminari</span>
-      </div>
-      <div class="slides-controls-header">
-        <span class="slide-timer" id="slideTimerDisplay">⏱️ 00:00</span>
-        <span class="slide-page-indicator" id="slideIndicator">1 / 8</span>
-        <button class="btn-icon" onclick="toggleSpeakerNotes()" title="Spiker Eslatmalari (Auditoriyaga ko'rinmaydigan eslatma)">📝 Eslatma</button>
-        <button class="btn-icon" onclick="toggleFullscreen()" title="To'liq ekran">⛶</button>
-        <button class="btn-icon btn-close-slides" onclick="closePresentation()" title="Chiqish (Esc)">✕ Chiqish</button>
-      </div>
-    </div>
-
-    <!-- Slide Stage -->
-    <div class="slide-stage" id="slideStage">
-      <!-- Slides will be rendered dynamically -->
-    </div>
-
-    <!-- Speaker Notes Drawer -->
-    <div class="speaker-notes-drawer" id="speakerNotesDrawer">
-      <div class="notes-header">
-        <span>🎙️ TALABA / SPIKER UCHUN ILMIY ESLATMA (Bu qism ma'ruzachiga yordam beradi):</span>
-        <button class="notes-close-btn" onclick="toggleSpeakerNotes()">✕</button>
-      </div>
-      <p id="speakerNotesContent">Ushbu slaydda talaba Noel Tichining asosiy g'oyasini tanishtirishi kerak...</p>
-    </div>
-
-    <!-- Slides Bottom Bar / Navigation -->
-    <div class="slides-bottom-bar">
-      <button class="btn-slide-nav" id="prevSlideBtn" onclick="prevSlide()">◀ Oldingi Slayd (←)</button>
-      <div class="slides-dots-container" id="slidesDotsContainer">
-        <!-- Dots rendered dynamically -->
-      </div>
-      <button class="btn-slide-nav" id="nextSlideBtn" onclick="nextSlide()">Keyingi Slayd (→) ▶</button>
-    </div>
-  </div>
-
-  <!-- Footer -->
+  <!-- Oddiy Footer -->
   <footer class="footer">
     <div class="container footer-content">
-      <div class="footer-left">
-        <div class="footer-title">"Yetakchilik Dvigateli" Ilmiy-Amaliy Seminar Portali</div>
-        <p>Noel M. Tichy: <em>The Leadership Engine</em> nazariyasi asosida magistratura talabalari uchun maxsus tayyorlangan.</p>
-        <p class="footer-sub">Hech qanday tashqi API kalitlarsiz va sun'iy intellektdan mustaqil, to'liq oflayn ishlay oladigan ta'lim platformasi.</p>
-      </div>
-      <div class="footer-right">
-        <div class="footer-links">
-          <a href="#hero">Yuqoriga</a>
-          <a href="#about-theory">Nazariya</a>
-          <a href="#simulator-game">Simulyator</a>
-          <a href="#tpov-builder">TPOV Pasporti</a>
-        </div>
-        <div class="copyright">
-          © 2026 Magistratura Seminar Ta'lim Resursi. Ochiq Ta'lim Loyihasi.
-        </div>
-      </div>
+      <p><strong>Yetakchilik Dvigateli</strong> — Noel Tichy nazariyasi asosidagi magistratura seminar platformasi.</p>
+      <p class="footer-note">100% mustaqil, API kalitlarsiz va o'rganish uchun soddalashtirilgan ochiq ta'lim vositasi.</p>
     </div>
   </footer>
 
