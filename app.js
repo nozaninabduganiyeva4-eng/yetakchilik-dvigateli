@@ -336,7 +336,12 @@ function restartQuiz() {
 }
 
 // Boshlang'ich yuklash
-document.addEventListener('DOMContentLoaded', () => {
+if (document.readyState === 'loading') {
+  document.addEventListener('DOMContentLoaded', () => {
+    renderSlide();
+    renderQuizQuestion();
+  });
+} else {
   renderSlide();
   renderQuizQuestion();
-});
+}
